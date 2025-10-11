@@ -71,10 +71,29 @@ body{
     html{
         font-size: 75%
     }
+
+
 }
 
-@media(max-width: 450px){
+@media(max-width: 800px){
     html{
         font-size: 60%
+    }
+    
+    .navbar .navbar-nav .navbar-dis{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: var(--black);
+        width: 30rem;
+        height: 100vh;
+    }
+
+    .navbar .navbar-nav .navbar-dis.active{
+        right: 0;
+    }
+
+    #hamburger-menu{
+        display: inline-block;
     }
 }
