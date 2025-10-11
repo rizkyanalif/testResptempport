@@ -1,4 +1,4 @@
-const navbarDis = document.querySelector('.navbar-dis')
+const navbarNav = document.querySelector('.navbar-nav')
 document.querySelector('#hamburger-menu').onclick = () => {
-    navbarDis.classList.toggle('active')
+    navbarNav.classList.toggle('active')
 }

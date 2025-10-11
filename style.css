@@ -38,7 +38,7 @@ body{
     color: var(--white);
 }
 
-.navbar .navbar-nav a{
+.navbar .navbar-nav a, .navbar .navbar-extra a{
     color: var(--white);
     display: inline-block;
     margin: 0 0.5rem;
@@ -84,7 +84,7 @@ body{
         display: inline-block;
     }
 
-    .navbar .navbar-nav .navbar-dis{
+    .navbar .navbar-nav{
         position: absolute;
         top: 100%;
         right: -100%;
@@ -94,15 +94,20 @@ body{
         transition: 0.3s ease;   
     }
 
-    .navbar .navbar-nav .navbar-dis.active{
+    .navbar .navbar-nav.active{
         right: 0;
     }
 
-    .navbar .navbar-dis a {
+    .navbar .navbar-nav a {
         color: var(--primary);
         display: block;
         margin: 1.5rem;
         padding: 0.5rem;
         font-size: 1.7rem;
+        text-align: center;
+    }
+
+    .navbar .navbar-nav a:hover::after{
+        transform: scaleX(0.18);
     }
 }
