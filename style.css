@@ -75,11 +75,15 @@ body{
 
 }
 
-@media(max-width: 800px){
+@media(max-width: 425px){
     html{
         font-size: 60%
     }
-    
+
+    #hamburger-menu{
+        display: inline-block;
+    }
+
     .navbar .navbar-nav .navbar-dis{
         position: absolute;
         top: 100%;
@@ -87,13 +91,18 @@ body{
         background-color: var(--black);
         width: 30rem;
         height: 100vh;
+        transition: 0.3s ease;   
     }
 
     .navbar .navbar-nav .navbar-dis.active{
         right: 0;
     }
 
-    #hamburger-menu{
-        display: inline-block;
+    .navbar .navbar-dis a {
+        color: var(--primary);
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 1.7rem;
     }
 }
