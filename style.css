@@ -67,6 +67,17 @@ body{
     display: none;
 }
 
+.hero{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero p{
+    max-width: 30rem;
+}
+
 @media(max-width: 768px){
     html{
         font-size: 75%
