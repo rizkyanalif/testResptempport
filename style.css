@@ -46,7 +46,8 @@ body{
     font-size: 1.2rem;
 }
 
-.navbar-nav a:hover{
+.navbar .navbar-nav a.highlight,
+.navbar .navbar-nav a:hover{
     color: var(--primary);
 }
 
@@ -59,7 +60,8 @@ body{
     transition: 0.2s linear;
 }
 
-.navbar .navbar-nav a:hover::after{
+.navbar .navbar-nav a:hover::after,
+.navbar .navbar-nav a.highlight::after{
     transform: scaleX(0.8);
 }
 
