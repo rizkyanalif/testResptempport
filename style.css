@@ -38,7 +38,7 @@ body{
     color: var(--white);
 }
 
-.navbar .navbar-nav a, .navbar .navbar-extra a{
+.navbar .navbar-nav a, .navbar .navbar-extra{
     color: var(--white);
     display: inline-block;
     margin: 0 0.5rem;
@@ -78,6 +78,10 @@ body{
     max-width: 30rem;
 }
 
+.hero .content{
+    display: flex;
+}
+
 @media(max-width: 768px){
     html{
         font-size: 75%
@@ -93,6 +97,7 @@ body{
 
     #hamburger-menu{
         display: inline-block;
+        cursor: pointer;
     }
 
     .navbar .navbar-nav{
