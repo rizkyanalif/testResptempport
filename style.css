@@ -78,6 +78,22 @@ body{
     max-width: 30rem;
 }
 
+.about, .skills, .project{
+    min-height: 100vh;
+}
+
+.about{
+    background-color: blue;
+}
+
+.skills{
+    background-color: aqua;
+}
+
+.project{
+    background-color: blanchedalmond;
+}
+
 @media(max-width: 768px){
     html{
         font-size: 75%
