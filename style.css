@@ -41,7 +41,7 @@ body{
     color: var(--white);
 }
 
-.navbar .navbar-nav a, .navbar .navbar-extra{
+.navbar .navbar-nav a, .navbar .navbar-extra a{
     color: var(--white);
     display: inline-block;
     margin: 0 0.5rem;
