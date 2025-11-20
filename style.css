@@ -20,6 +20,8 @@ body{
     /* color: #fff; */
 }
 
+/* NAVBAR */
+
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -70,18 +72,20 @@ body{
     display: none;
 }
 
-.hero{
+/* HOME */
+
+.home{
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.hero p{
+.home p{
     max-width: 30rem;
 }
 
-.hero .content{
+.home .content{
     display: flex;
 }
 
