@@ -94,38 +94,61 @@ body{
     display: flex;
 }
 
+.home .content .cta .social .linkedin-button{
+    background-color: #0A66C2;
+    color: #FFFFFF;
+}
+.home .content .cta .social .github-button{
+    background-color: #0D1117;
+    color: #FFFFFF;
+}
+
 /* ABOUT */
 
 .about{
-    padding: 5rem 7% 1.4rem; 
+    padding: 5rem 7% 1.4rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.about .about-me{
+    flex: 1;
+    max-width: 50%;
+}
+
+.about .about-skills{
+    max-width: 30%;
 }
 
 .about h1{
-    text-align: center;
+    text-align: left;
     font-size: 2.3rem;
     margin-bottom: 3rem;
 }
 
-.about .content{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.about .content .about-desc{
-    max-width: 40%;
-    padding: 0 1rem;
-}
-
-.about .content .about-desc p{
+.about .about-me p{
     margin-bottom: 0.8rem;
 }
 
-/* SKILLS */
+.about .about-skills .skills{
+    display: flex;
+    flex-wrap: wrap;
+}
 
-.skills{
-    padding: 5rem 7% 1.4rem; 
-    background-color: blue;
+.about .about-skills .skills .skills-skill{
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.2rem;
+    margin-right: 0.4rem;
+    font-size: 1rem;
+    background: rgba(153, 153, 153, 0.2);
+    border-radius: 5px;
+    font-weight: 600;
+    color: #666;
+}
+
+.about .about-skills .projects-button{
+    display: none;
 }
 
 /* PROJECTS */
