@@ -14,9 +14,13 @@
     scroll-behavior: smooth;
 }
 
+section{
+    scroll-margin-top: 4rem;
+}
+
 body{
     font-family: 'Poppins', sans-serif;
-    /* background-color: var(--bg); */
+    /* background-color: var(--white); */
     /* color: #fff; */
 }
 
@@ -79,6 +83,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: var(--white);
 }
 
 .home p{
@@ -87,6 +92,47 @@ body{
 
 .home .content{
     display: flex;
+}
+
+/* ABOUT */
+
+.about{
+    padding: 5rem 7% 1.4rem; 
+}
+
+.about h1{
+    text-align: center;
+    font-size: 2.3rem;
+    margin-bottom: 3rem;
+}
+
+.about .content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about .content .about-desc{
+    max-width: 40%;
+    padding: 0 1rem;
+}
+
+.about .content .about-desc p{
+    margin-bottom: 0.8rem;
+}
+
+/* SKILLS */
+
+.skills{
+    padding: 5rem 7% 1.4rem; 
+    background-color: blue;
+}
+
+/* PROJECTS */
+
+.projects{
+    padding: 5rem 7% 1.4rem; 
+    background-color: red;
 }
 
 @media(max-width: 768px){
