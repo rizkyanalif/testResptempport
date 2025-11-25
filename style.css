@@ -2,6 +2,8 @@
     --white: #f2f2f2;
     --black: #222222;
     --primary: var(--white);
+    --linkedin: #0A66C2;
+    --github: #0D1117;
 }
 
 *{
@@ -23,6 +25,21 @@ body{
     /* background-color: var(--white); */
     /* color: #fff; */
 }
+
+.button{
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    background-color: #6c63ff;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-right: 1rem;
+    transition: 0.3s;
+}
+
+
+
 
 /* NAVBAR */
 
@@ -71,10 +88,13 @@ body{
     transform: scaleX(0.8);
 }
 
-
 #hamburger-menu{
     display: none;
+    color: var(--white);
 }
+
+
+
 
 /* HOME */
 
@@ -86,61 +106,215 @@ body{
     background-color: var(--white);
 }
 
-.home p{
+.home .content{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.home .content .home-text{
+    flex: 1;
+}
+
+.home .content .home-text h1{
+    /* font-size: 3rem; */
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.home .content .home-text p{
+    font-size: 1.1rem;
+    margin-bottom: 1.6rem;
     max-width: 30rem;
 }
 
-.home .content{
+.home .content .home-text .social{
+    margin-bottom: 2rem;
     display: flex;
+    gap: 1rem;
 }
+
+.home .content .home-text .social a{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.home .content .home-text .social a:hover, .button:hover{
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.home .content .home-text .social .linkedin-button{
+    background-color: var(--linkedin);
+    color: #FFFFFF;
+}
+.home .content .home-text .social .github-button{
+    background-color: var(--github);
+    color: #FFFFFF;
+}
+
+/* .home .content .home-image{
+    flex: 1;
+    text-align: center;
+} */
+
+.home .content .home-image img{
+    width: 150px;
+    border-radius: 50%;
+    border: 5px solid var(--white);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
 
 /* ABOUT */
 
 .about{
-    padding: 5rem 7% 1.4rem; 
+    padding: 5rem 7%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    font-size: 1.1rem;
+    background-color: #F7F7F7;
+}
+
+.about .about-me{
+    flex: 1;
+    max-width: 50%;
+}
+
+.about .about-skills{
+    max-width: 30%;
 }
 
 .about h1{
+    text-align: left;
+    font-size: 2.3rem;
+    margin-bottom: 3rem;
+}
+
+.about .about-me p{
+    margin-bottom: 0.8rem;
+}
+
+.about .about-skills .skills{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about .about-skills .skills .skills-skill{
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.6rem;
+    margin-right: 0.8rem;
+    font-size: 1rem;
+    background: rgba(153, 153, 153, 0.2);
+    border-radius: 5px;
+    font-weight: 600;
+    color: #666;
+}
+
+.about .about-skills .projects-button{
+    display: none;
+}
+
+
+
+
+/* PROJECTS */
+
+.projects{
+    padding: 5rem 7%; 
+    background-color: var(--white);
+}
+
+.projects h1{
     text-align: center;
     font-size: 2.3rem;
     margin-bottom: 3rem;
 }
 
-.about .content{
+.projects .content{
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    margin: 5rem;
 }
 
-.about .content .about-desc{
-    max-width: 40%;
-    padding: 0 1rem;
+.projects .content .project-image{
+    flex: 1;
 }
 
-.about .content .about-desc p{
-    margin-bottom: 0.8rem;
+.projects .content .project-image img{
+    width: 36rem;
+    max-width: 100%;
+    /* height: auto; */
+    border-radius: 10px;
+    max-height: 21rem;
 }
 
-/* SKILLS */
-
-.skills{
-    padding: 5rem 7% 1.4rem; 
-    background-color: blue;
+.projects .content .project-info{
+    flex: 1;
+    text-align: left;
+    margin-left: 2rem;
 }
 
-/* PROJECTS */
-
-.projects{
-    padding: 5rem 7% 1.4rem; 
-    background-color: red;
+.projects .content .project-info h3{
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
 }
+
+.projects .content .project-info p{
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.projects div .view-project{
+    padding: 0.8rem 2rem;
+}
+.projects div .git-project{
+    padding: 0.8rem 2rem;
+    background-color: var(--github) !important;
+    color: #FFFFFF !important;
+}
+
+
+
+
+/* MEDIA QUERY */
 
 @media(max-width: 768px){
     html{
         font-size: 75%
     }
+    .about .about-skills .projects-button{
+        display: inline;
+    }
+    .about .about-me .projects-button{
+        display: none;
+    }
+    .about{
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    .about .about-me{
+    flex: 1;
+    max-width: 70%;
+    }
+    .about .about-skills{
+        max-width: 70%;
+    }
 
-
+    .projects .content{
+        flex-direction: column;
+        align-content: center;
+    }
 }
 
 @media(max-width: 425px){
@@ -178,5 +352,9 @@ body{
 
     .navbar .navbar-nav a:hover::after{
         transform: scaleX(0.18);
+    }
+
+    .home .content{
+        flex-direction: column;
     }
 }
