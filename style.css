@@ -20,12 +20,26 @@ section{
     scroll-margin-top: 4rem;
 }
 
-
 body{
     font-family: 'Poppins', sans-serif;
     /* background-color: var(--white); */
     /* color: #fff; */
 }
+
+.button{
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    background-color: #6c63ff;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-right: 1rem;
+    transition: 0.3s;
+}
+
+
+
 
 /* NAVBAR */
 
@@ -74,11 +88,13 @@ body{
     transform: scaleX(0.8);
 }
 
-
 #hamburger-menu{
     display: none;
     color: var(--white);
 }
+
+
+
 
 /* HOME */
 
@@ -90,39 +106,72 @@ body{
     background-color: var(--white);
 }
 
-.home p{
+.home .content{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.home .content .home-text{
+    flex: 1;
+}
+
+.home .content .home-text h1{
+    /* font-size: 3rem; */
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.home .content .home-text p{
+    font-size: 1.1rem;
+    margin-bottom: 1.6rem;
     max-width: 30rem;
 }
 
-.home .content{
+.home .content .home-text .social{
+    margin-bottom: 2rem;
     display: flex;
+    gap: 1rem;
 }
 
-.home .content .cta{
-    display: flex;
-    flex-direction: column;
+.home .content .home-text .social a{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
+.home .content .home-text .social a:hover, .button:hover{
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
 
-.home .content .cta .social .linkedin-button{
+.home .content .home-text .social .linkedin-button{
     background-color: var(--linkedin);
     color: #FFFFFF;
 }
-.home .content .cta .social .github-button{
+.home .content .home-text .social .github-button{
     background-color: var(--github);
     color: #FFFFFF;
 }
 
-.home .content .cta .social a{
-    /* padding: 5rem 1rem; */
-    /* margin-bottom: 0.4rem; */
-    /* margin-right: 0.6rem; */
-    /* font-size: 1rem; */
-    /* background: rgba(153, 153, 153, 0.2); */
-    /* border-radius: 5px; */
-    /* font-weight: 600; */
-    /* color: #666; */
+/* .home .content .home-image{
+    flex: 1;
+    text-align: center;
+} */
+
+.home .content .home-image img{
+    width: 150px;
+    border-radius: 50%;
+    border: 5px solid var(--white);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
+
+
 /* ABOUT */
 
 .about{
@@ -160,8 +209,8 @@ body{
 
 .about .about-skills .skills .skills-skill{
     padding: 0.5rem 1rem;
-    margin-bottom: 0.4rem;
-    margin-right: 0.6rem;
+    margin-bottom: 0.6rem;
+    margin-right: 0.8rem;
     font-size: 1rem;
     background: rgba(153, 153, 153, 0.2);
     border-radius: 5px;
@@ -172,6 +221,9 @@ body{
 .about .about-skills .projects-button{
     display: none;
 }
+
+
+
 
 /* PROJECTS */
 
@@ -222,20 +274,17 @@ body{
     line-height: 1.6;
 }
 
-.projects .content .project-info a, .button{
-    background-color: #6c63ff;
-    color: white;
-    padding: 0.5rem;
-    border-radius: 5px;
-    font-weight: bold;
-    display: inline-block;
-    margin-right: 1rem;
+.projects div .view-project{
+    padding: 0.8rem 2rem;
 }
-
 .projects div .git-project{
+    padding: 0.8rem 2rem;
     background-color: var(--github) !important;
     color: #FFFFFF !important;
 }
+
+
+
 
 /* MEDIA QUERY */
 
@@ -303,5 +352,9 @@ body{
 
     .navbar .navbar-nav a:hover::after{
         transform: scaleX(0.18);
+    }
+
+    .home .content{
+        flex-direction: column;
     }
 }
