@@ -2,6 +2,8 @@
     --white: #f2f2f2;
     --black: #222222;
     --primary: var(--white);
+    --linkedin: #0A66C2;
+    --github: #0D1117;
 }
 
 *{
@@ -17,6 +19,7 @@
 section{
     scroll-margin-top: 4rem;
 }
+
 
 body{
     font-family: 'Poppins', sans-serif;
@@ -74,6 +77,7 @@ body{
 
 #hamburger-menu{
     display: none;
+    color: var(--white);
 }
 
 /* HOME */
@@ -94,22 +98,40 @@ body{
     display: flex;
 }
 
+.home .content .cta{
+    display: flex;
+    flex-direction: column;
+}
+
+
 .home .content .cta .social .linkedin-button{
-    background-color: #0A66C2;
+    background-color: var(--linkedin);
     color: #FFFFFF;
 }
 .home .content .cta .social .github-button{
-    background-color: #0D1117;
+    background-color: var(--github);
     color: #FFFFFF;
 }
 
+.home .content .cta .social a{
+    /* padding: 5rem 1rem; */
+    /* margin-bottom: 0.4rem; */
+    /* margin-right: 0.6rem; */
+    /* font-size: 1rem; */
+    /* background: rgba(153, 153, 153, 0.2); */
+    /* border-radius: 5px; */
+    /* font-weight: 600; */
+    /* color: #666; */
+}
 /* ABOUT */
 
 .about{
-    padding: 5rem 7% 1.4rem;
+    padding: 5rem 7%;
     display: flex;
     align-items: flex-start;
     justify-content: space-around;
+    font-size: 1.1rem;
+    background-color: #F7F7F7;
 }
 
 .about .about-me{
@@ -138,8 +160,8 @@ body{
 
 .about .about-skills .skills .skills-skill{
     padding: 0.5rem 1rem;
-    margin-bottom: 0.2rem;
-    margin-right: 0.4rem;
+    margin-bottom: 0.4rem;
+    margin-right: 0.6rem;
     font-size: 1rem;
     background: rgba(153, 153, 153, 0.2);
     border-radius: 5px;
@@ -154,16 +176,96 @@ body{
 /* PROJECTS */
 
 .projects{
-    padding: 5rem 7% 1.4rem; 
-    background-color: red;
+    padding: 5rem 7%; 
+    background-color: var(--white);
 }
+
+.projects h1{
+    text-align: center;
+    font-size: 2.3rem;
+    margin-bottom: 3rem;
+}
+
+.projects .content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5rem;
+}
+
+.projects .content .project-image{
+    flex: 1;
+}
+
+.projects .content .project-image img{
+    width: 36rem;
+    max-width: 100%;
+    /* height: auto; */
+    border-radius: 10px;
+    max-height: 21rem;
+}
+
+.projects .content .project-info{
+    flex: 1;
+    text-align: left;
+    margin-left: 2rem;
+}
+
+.projects .content .project-info h3{
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.projects .content .project-info p{
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.projects .content .project-info a, .button{
+    background-color: #6c63ff;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.projects div .git-project{
+    background-color: var(--github) !important;
+    color: #FFFFFF !important;
+}
+
+/* MEDIA QUERY */
 
 @media(max-width: 768px){
     html{
         font-size: 75%
     }
+    .about .about-skills .projects-button{
+        display: inline;
+    }
+    .about .about-me .projects-button{
+        display: none;
+    }
+    .about{
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    .about .about-me{
+    flex: 1;
+    max-width: 70%;
+    }
+    .about .about-skills{
+        max-width: 70%;
+    }
 
-
+    .projects .content{
+        flex-direction: column;
+        align-content: center;
+    }
 }
 
 @media(max-width: 425px){
