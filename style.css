@@ -91,6 +91,7 @@ body{
 #hamburger-menu{
     display: none;
     color: var(--white);
+    font-size: 1.5rem;
 }
 
 
@@ -281,6 +282,26 @@ body{
     padding: 0.8rem 2rem;
     background-color: var(--github) !important;
     color: #FFFFFF !important;
+}
+
+
+
+
+/* FOOTER */
+footer{
+    background-color: var(--black);
+    text-align: center;
+    padding: 1.5rem 0rem;
+    color: var(--white);
+}
+
+footer p{
+    font-size: 0.9rem;
+}
+
+footer a{
+    color: var(--white);
+    font-weight: 700;
 }
 
 
